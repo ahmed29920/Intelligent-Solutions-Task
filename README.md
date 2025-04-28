@@ -165,16 +165,15 @@ It provides full CRUD functionality, filtering, pagination, soft deletes, and fo
         <pre><code>git clone https://github.com/ahmed29920/Intelligent-Solutions-Task.git
 cd Intelligent-Solutions-Task</code></pre>
     </li>
-
-    <li><strong>Install Dependencies</strong>
+<li><strong>Install Dependencies</strong>
         <pre><code>composer install</code></pre>
     </li>
 
-    <li><strong>Copy .env File</strong>
+<li><strong>Copy .env File</strong>
         <pre><code>cp .env.example .env</code></pre>
     </li>
 
-    <li><strong>Configure Database</strong>
+<li><strong>Configure Database</strong>
         <p>Update <code>.env</code> file:</p>
         <pre><code>DB_CONNECTION=mysql
 
@@ -186,20 +185,20 @@ DB_PASSWORD=your_database_password</code></pre>
 
 </li>
 
-    <li><strong>Generate App Key</strong>
+<li><strong>Generate App Key</strong>
         <pre><code>php artisan key:generate</code></pre>
     </li>
 
-    <li><strong>Run Migrations and Seeders</strong>
+<li><strong>Run Migrations and Seeders</strong>
         <pre><code>php artisan migrate --seed</code></pre>
     </li>
 
-    <li><strong>Serve the Application</strong>
+<li><strong>Serve the Application</strong>
         <pre><code>php artisan serve</code></pre>
         <p>The API will be available at: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a></p>
     </li>
 
-    <li><strong>Use API Tools</strong>
+<li><strong>Use API Tools</strong>
         <p>Use tools like <strong>Postman</strong> or <strong>cURL</strong> to test the endpoints.</p>
     </li>
 
