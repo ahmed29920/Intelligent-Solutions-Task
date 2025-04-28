@@ -162,8 +162,8 @@ It provides full CRUD functionality, filtering, pagination, soft deletes, and fo
 
 <ol>
     <li><strong>Clone the Repository</strong>
-        <pre><code>git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name</code></pre>
+        <pre><code>git clone https://github.com/ahmed29920/Intelligent-Solutions-Task.git
+cd Intelligent-Solutions-Task</code></pre>
     </li>
 
     <li><strong>Install Dependencies</strong>
