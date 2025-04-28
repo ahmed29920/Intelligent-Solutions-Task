@@ -190,7 +190,7 @@ DB_PASSWORD=your_database_password</code></pre>
     </li>
 
 <li><strong>Run Migrations and Seeders</strong>
-        <pre><code>php artisan migrate --seed</code></pre>
+        <pre><code>php artisan migrate --seed --class=ProductSeeder</code></pre>
     </li>
 
 <li><strong>Serve the Application</strong>
