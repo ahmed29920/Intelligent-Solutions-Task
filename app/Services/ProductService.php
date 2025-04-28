@@ -4,7 +4,7 @@ namespace App\Services;
 
 
 use App\Http\Requests\ProductRequest;
-use App\Repositories\ProductRepositoryInterface;
+use App\Interfaces\ProductRepositoryInterface;
 
 
 class ProductService
