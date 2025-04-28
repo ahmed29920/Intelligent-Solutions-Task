@@ -10,6 +10,7 @@ class ProductRepository implements ProductRepositoryInterface
 {
     public function index($filters)
     {
+        // Apply filters to the query
         $query = Product::query();
 
         if (isset($filters['name'])) {
@@ -44,6 +45,7 @@ class ProductRepository implements ProductRepositoryInterface
     public function update($id, array $data)
     {
         $product = $this->find($id);
+        // Check if the product exists before attempting to update
         if ($product) {
             $product->update($data);
         }
@@ -53,6 +55,7 @@ class ProductRepository implements ProductRepositoryInterface
     public function delete($id)
     {
         $product = $this->find($id);
+        // Check if the product exists before attempting to delete
         return $product ? $product->delete() : false;
     }
 

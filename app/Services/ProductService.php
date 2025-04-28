@@ -9,8 +9,10 @@ use App\Interfaces\ProductRepositoryInterface;
 
 class ProductService
 {
+
     protected $productRepository;
 
+    // Inject the ProductRepositoryInterface into the constructor
     public function __construct(ProductRepositoryInterface $productRepository)
     {
         $this->productRepository = $productRepository;
@@ -47,18 +49,7 @@ class ProductService
     public function updateProduct($id, ProductRequest $request)
     {
         $data = $request->validated();
-
-        // Ensure images is an array if provided
-        if (isset($data['images']) && is_array($data['images'])) {
-            $imagePaths = [];
-            foreach ($data['images'] as $image) {
-                $imagePath = $image->store('products', 'public');
-                $imagePaths[] = $imagePath;
-            }
-            // Convert the array of image paths to a JSON string
-            $data['images'] = json_encode($imagePaths);
-        }
-
+        // images are not sent in PUT method request
         return $this->productRepository->update($id, $data);
     }
 

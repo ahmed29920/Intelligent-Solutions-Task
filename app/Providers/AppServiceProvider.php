@@ -13,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Bind the ProductRepositoryInterface to the ProductRepository
         $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
     }
 

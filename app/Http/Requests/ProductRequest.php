@@ -33,6 +33,7 @@ class ProductRequest extends FormRequest
             'status' => 'required|in:Active,Inactive',
         ];
     }
+    // Custom error messages
     public function messages(): array
     {
         return [
@@ -67,6 +68,7 @@ class ProductRequest extends FormRequest
         ];
     }
 
+    // Custom response for failed validation
     protected function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(response()->json([

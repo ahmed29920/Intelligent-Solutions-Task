@@ -13,6 +13,7 @@ class ProductController extends Controller
 {
     protected $productService;
 
+    // Inject the ProductService into the constructor
     public function __construct(ProductService $productService)
     {
         $this->productService = $productService;
@@ -27,10 +28,8 @@ class ProductController extends Controller
         // Get all products with optional filters
         $filters = $request->only(['name', 'status', 'min_price', 'max_price']);
 
-        // Validate filters
         $products = $this->productService->getAllProducts($filters);
 
-        // return response()->json($products, 200);
         return ProductResource::collection($products);
     }
 

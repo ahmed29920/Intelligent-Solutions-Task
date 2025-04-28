@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Product extends Model
 {
     use SoftDeletes , HasFactory;
+    
     protected $fillable = [
         'name',
         'images',
@@ -17,6 +18,7 @@ class Product extends Model
         'quantity',
         'status',
     ];
+    // define the attributes that should be cast to native types
     protected $casts = [
         'images' => 'array',
         'price' => 'float',

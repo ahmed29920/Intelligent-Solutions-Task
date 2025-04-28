@@ -4,6 +4,7 @@ namespace App\Interfaces;
 
 interface ProductRepositoryInterface
 {
+    // Define the methods that the ProductRepository should implement
     public function index(array $filters);
     public function create(array $data);
     public function find($id);
